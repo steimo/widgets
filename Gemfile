@@ -11,6 +11,18 @@ gem "dotenv-rails", "~> 2.8", ">= 2.8.1", groups: [:development, :test]
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.6"
 
+# Brakeman analyzes our code
+# for security vulnerabilities
+gem "brakeman", "~> 6.0", ">= 6.0.1"
+
+# bundler-audit enables bundle audit which analyzes our
+# dependencies for known vulnerabilities
+gem "bundler-audit", "~> 0.9.1"
+
+# lograge changes Rails' logging to a more
+# traditional one-line-per-event format
+gem "lograge", "~> 0.13.0"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
