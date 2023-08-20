@@ -2,7 +2,7 @@
 
 <%# widget:: expected to be a Widget to rate %>
 <%# suppress_cta:: if true, suppresses the call-to-action %>
-<%# optional, default is false (show CTA) %>
+<%#                optional, default is false (show CTA)  %>
 
 <section>
   <div class="clear-floats">
@@ -24,6 +24,8 @@
     </ol>
   </div>
   <% if !local_assigns[:suppress_cta] %>
-    <p>Your ratings help us be amazing!</p>
+    <p>
+      Your ratings help us be amazing!
+    </p>
   <% end %>
 </section>
