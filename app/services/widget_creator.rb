@@ -1,26 +1,9 @@
 class WidgetCreator
 
-  def initialize(notifier:)
-    @notifier = notifier
-  end
-
-  def create_widget(widget_params)
-    widget = Widget.create(widget_params)
-
-    if widget.valid?
-      @notifier.notify(:widget, widget.id)
-      sales_tax_api.charge_tax(widget)
-      Result.new(created: true, widget: widget)
-    else
-      Result.new(created: false, widget: widget)
-    end
-
-  end
-
-  private
-
-  def sales_tax_api
-    @sales_tax_api ||= ThirdParty::Tax.new
+  def create_widget(widget)
+    widget.widget_status = WidgetStatus.first
+    widget.save
+    Result.new(created: widget.valid?, widget: widget)
   end
 
   class Result
