@@ -1,6 +1,9 @@
 class Widget < ApplicationRecord
   belongs_to :manufacturer
   belongs_to :widget_status
+
+  validates :name, { presence: true }
+  validates :manufacturer_id, { presence: true }
   validates :price_cents,
             numericality: { less_than_or_equal_to: 10_000_00 }
 
