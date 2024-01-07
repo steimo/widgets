@@ -23,7 +23,7 @@ class WidgetsController < ApplicationController
     else
       @widget = result.widget
       @manufacturers = Manufacturer.all
-      render :new
+      render :new, status: 422
     end
   end
 
