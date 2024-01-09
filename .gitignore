@@ -37,3 +37,4 @@ config/master.key
 .env.*.local
 .env.development
 .env.test
+Procfile.dev

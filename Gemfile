@@ -23,6 +23,12 @@ gem "bundler-audit", "~> 0.9.1"
 # traditional one-line-per-event format
 gem "lograge", "~> 0.13.0"
 
+# Sidekiq handles background jobs
+gem "sidekiq"
+
+# Foreman runs all processes for local development
+gem "foreman"
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
