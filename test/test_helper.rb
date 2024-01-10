@@ -2,6 +2,7 @@ ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
 require "support/confidence_check"
+require "sidekiq/testing"
 
 class ActiveSupport::TestCase
   include TestSupport::ConfidenceCheck
